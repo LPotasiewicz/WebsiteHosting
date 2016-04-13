@@ -1,0 +1,171 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Rajdhani', sans-serif;
+}
+
+html{
+  height: 100%;
+  margin:0;
+  background-color:black;
+}
+
+body{
+  background: linear-gradient(0deg, #000 5%, rgba(0, 0, 0, .5) 50%), url("img/castBackground.jpg") no-repeat center;
+  background-size: cover;
+  height: 100%;
+}
+
+.background{
+  position:fixed;
+  width: 100%;
+  height:auto;
+  z-index: -1;
+  top:0;
+  left:0;
+}
+
+.cross{
+  text-align: center; 
+  margin: 0;
+  padding: 25px 0;
+  background-color: rgba(220, 220, 220, .4);
+}
+
+.button1{
+  padding: 10px;
+  background-color: rgba(200, 200, 200, .8);
+  -webkit-user-select: none;
+  z-index: 1;
+  position:absolute; 
+  left: 10px;
+  top: 250px;
+}
+.button2{
+  padding: 10px;
+  background-color: rgba(200, 200, 200, .8);
+  -webkit-user-select: none;
+  z-index: 1;
+  position:absolute;
+  right: 10px;
+  top: 250px;
+  
+}
+
+.floatLeft{
+  display: block;
+  float: left;
+  width: 200px;
+  margin: 15px;
+  padding: 15px;
+  text-align: left;
+  background-color: rgba(200, 200, 200, .5);
+  transition: background-color 0.2s;
+  position:relative;
+}
+
+.floatLeft:hover {
+  cursor:pointer;
+  background-color: rgba(200, 170, 100, .3);
+}
+
+.floatLeft p{
+  margin: 0;
+  display: inline-block;
+  white-space: normal;
+}
+
+.castImage {
+  width: 200px;
+  height: auto;
+  display:block;
+  margin-bottom: 5px;
+}
+
+#castImgLarge {
+  width: 400px;
+  height: auto;
+  float:left;
+  display:inline;
+}
+
+.castInfoText {
+  padding: 10px;
+  display: inline-block;
+  width: 50%
+}
+
+.castInfoText h3 strong{
+  font-size: 36px;
+}
+
+.castInfoText h3{
+  font-size: 28px;
+}
+
+.castInfoText p{
+  font-size: 24px;
+  width: 100%;
+}
+
+.castInfo {
+  width: 80%;
+  height: 400px;
+  background-color: rgba(200, 200, 200, .5);
+  margin: 360px 10% 50px 10%;
+}
+
+#sideScroll{
+  width: auto;
+  height:auto;
+  left: 0%;
+  position: absolute;
+  transition: left 1s;
+  margin: 30px 10%;
+  overflow-x: hidden;
+  display: block;
+}
+
+h1{
+  font-size: 60px;
+  margin: -10px 0 -13px 0;
+  letter-spacing: 6px;
+  text-indent: 6px;
+  white-space:nowrap;
+}
+
+h3{
+  font-size: 20px;
+  font-weight: 500;
+}
+
+a{
+  text-decoration:none;
+  color: #000;
+}
+
+@media only screen and (max-width: 1080px) {
+   
+  .castInfoText {
+    padding: 10px;
+    display: inline-block;
+    width: 380px;
+    position: absolute;
+    left: 50%;
+    margin-left:-200px;
+    margin-bottom:20px;
+    top: 860px;
+    background-color: rgba(200, 200, 200, .5);
+  }  
+  #castImgLarge {
+    width: 400px;
+    height: auto;
+    position:absolute;
+    left: 50%;
+    margin-left:-200px;
+    top: 460px;
+    }
+  .castInfo {
+    background:transparent;
+  }
+}

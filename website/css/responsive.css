@@ -1,0 +1,92 @@
+h1 {
+  font-size: 3em;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+  
+h2 {
+  font-size: 1.25em;
+  margin-bottom: 0px;
+}
+@media screen and (max-width: 660px) {
+  .return2 {
+    clear: left;
+  }
+}
+
+@media screen and (min-width: 660px) {
+  /*****************************
+           GALLERY
+*****************************/
+  
+  #gallery li {
+    width: 28.3333%;
+      
+  }
+  
+  .return {
+    clear: left;
+  }
+  
+  .song {
+    max-width:100%;
+  }
+  
+    /*****************************
+           About
+*****************************/
+  
+  .photo {
+    float: left;
+    margin: 0 5% 180px 0;
+  }
+  
+  .contact-info li {
+/*    float: left;*/
+  }
+  .contact-info {
+    display: block;
+  }
+  
+  /*****************************
+           HEADER
+*****************************/
+  
+  nav {
+    background: none;
+    float: right;
+    font-size: 1.125em;
+    margin-right: 5%;
+    text-align: right;
+    width: 45%;
+    padding-top: 70px;
+  }
+  
+  #logo {
+    float: left;
+    margin-left: 5%;
+    text-align:left;
+    width: 45%;
+    white-space: nowrap;
+    overflow: visible;
+  }
+  
+  h1 {
+    font-size: 3.5em;
+    margin-bottom: 15px;
+    margin-top: 15px;
+  }
+  
+  h2 {
+    font-size: 1.25em;
+    margin-bottom: 15px;
+  }
+  
+  .song li {
+    width:40%;
+  }
+  
+}
+
+
+

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Interstellar</title>
+  <link href='https://fonts.googleapis.com/css?family=Rajdhani:400,500,600,700,300' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="galleryStyle.css" type="text/css" media="screen" charset="utf-8">
+</head>
+
+<body>
+  <div class="cross">
+      <h1>The Beauty Of Space</h1>
+  </div>
+  <div onclick="left()" class="button1">Left</div>
+      <div onclick="right()" class="button2">Right</div>
+     <div id="sideScroll">
+      <span class="floatLeft" onClick="castInfo(0)">
+        <img src="img/interstellarBlackHole.jpg" alt="Cooper" class="castImage">
+      </span>
+      <span class="floatLeft" onClick="castInfo(1)">
+        <img src="img/interstellarWater.jpg" alt="Brand" class="castImage">
+      </span>
+      <span class="floatLeft" onClick="castInfo(2)">
+        <img src="img/inters.jpg" alt="Murph" class="castImage">
+      </span>
+      <span class="floatLeft" onClick="castInfo(3)">
+        <img src="img/interstellarSky.jpg" alt="Murph" class="castImage">
+      </span>
+      <span class="floatLeft" onClick="castInfo(4)">
+        <img src="img/interstellarPlanet.jpg" alt="Murph" class="castImage">
+      </span>
+    </div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.min.js"></script>
+<script>  
+  var scrollPos = 0;
+  var screenWidth = (1920 - window.innerWidth) / 2;
+  
+  document.getElementById('sideScroll').style.width = (5*1920) + "px";
+  function left(){
+    if (scrollPos < 0){
+      scrollPos += 1;
+      document.getElementById('sideScroll').style.left = (scrollPos*1920 - screenWidth) + "px";
+    }
+  };
+  function right(){
+    if (scrollPos > -4){
+      scrollPos -= 1;
+      document.getElementById('sideScroll').style.left = (scrollPos*1920 - screenWidth) + "px";
+    }
+  };
+  $( window ).resize(function() {
+    screenWidth = (1920 - window.innerWidth) / 2;
+    document.getElementById('sideScroll').style.left = (scrollPos*1920 - screenWidth) + "px";
+  });
+  
+</script>
+</html>

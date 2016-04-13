@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Interstellar</title>
+  <link href='https://fonts.googleapis.com/css?family=Rajdhani:400,500,600,700,300' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="dog.css" type="text/css" media="screen" charset="utf-8">
+</head>
+
+<body>
+  <div id="bigDivWOOFWOOF">
+  <div class="theDiv"></div>
+</div>
+</body>
+
+<script>
+  var WOOF = document.getElementById('bigDivWOOFWOOF');
+
+var divNums = 1;
+var spaz = function(){
+var top = prompt("times");
+ for(var i = 0; i < top; i ++){
+  imaspaz();  
+}
+};
+function imaspaz() {
+  divNums += 1;
+  WOOF.innerHTML += "<div class='theDiv'></div>";
+  for (var i = 0; i < divNums; i++) {
+    setTimeout(die(i), 50 * i);
+    console.log(i);
+  }
+};
+
+function die(index) {
+  var color = Math.random() * 800 + 100;
+  setTimeout(function() {
+    document.getElementsByClassName('theDiv')[index].style.backgroundColor = "#" + Math.floor(color);
+  }, 50*index);
+  console.log(index);
+};
+
+WOOF.onclick = spaz;
+</script>
+</html>

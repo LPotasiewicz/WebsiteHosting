@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Interstellar</title>
+  <link href='https://fonts.googleapis.com/css?family=Rajdhani:400,500,600,700,300' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="castStyle.css" type="text/css" media="screen" charset="utf-8">
+</head>
+
+<body>
+  <div class="cross">
+    <top>
+      <h1>The Cast Of Interstellar</h1>
+    </top>
+    <div onclick="left()" class="button1">Left</div>
+      <div onclick="right()" class="button2">Right</div>
+     <div id="sideScroll">
+      <span class="floatLeft" onClick="castInfo(0)">
+        <img src="img/Mathew.jpg" alt="Cooper" class="castImage">
+        <h3><strong>Cooper</strong></h3>
+        <h3>Matthew Mcconaughey</h3>
+        <p>Joe Cooper was born in...</p>
+      </span>
+      <span class="floatLeft" onClick="castInfo(1)">
+        <img src="img/Brand.jpg" alt="Brand" class="castImage">
+        <h3><strong>Brand</strong></h3>
+        <h3>Anne Hathaway</h3>
+        <p>Amelia Brand was born...</p>
+      </span>
+      <span class="floatLeft" onClick="castInfo(2)">
+        <img src="img/Murph.jpg" alt="Murph" class="castImage">
+        <h3><strong>Murph</strong></h3>
+        <h3>Jessica Chastain</h3>
+        <p>Murphy Cooper was born...</p>
+      </span>
+      <span class="floatLeft" onClick="castInfo(3)">
+        <img src="img/Mann.jpg" alt="Man" class="castImage">
+        <h3><strong>Mann</strong></h3>
+        <h3>Matt Damon</h3>
+        <p>Dr. Mann was a brilliant...</p>
+      </span>
+      <span class="floatLeft" onClick="castInfo(4)">
+        <img src="img/ProfBrand.jpg" alt="Prof. Brand" class="castImage">
+        <h3><strong>Prof. Brand</strong></h3>
+        <h3>Michael Caine</h3>
+        <p>Professor John Brand was...</p>
+      </span>
+      <span class="floatLeft" onClick="castInfo(5)">
+        <img src="img/Romilly.jpg" alt="Romilly" class="castImage">
+        <h3><strong>Romilly</strong></h3>
+        <h3>David Gyasi</h3>
+        <p>Nikolai Romilly was born...</p>
+      </span>
+    </div>
+  </div>
+  <div class="castInfo">
+      <img src="img/Mathew.jpg" alt="Cooper" id="castImgLarge">
+      <span class="castInfoText">
+        <h3><strong id="name">Cooper</strong></h3>
+        <h3 id="actor">Matthew Mcconaughey</h3>
+        <p id="bio">Joe Cooper was born in Dalhart, Texas in the year 2030. He spent his childhood in a series of traumatic events of famine of nations against each other. He was a very bright student with an interest in space travel and engineering while at the University of Colorado in Denver.</p>
+      </span>
+    </div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.min.js"></script>
+<script>
+  var cast = [
+    {
+      name: 'Cooper',
+      actor: 'Matthew Mcconaughey',
+      bio: 'Joe Cooper was born in Dalhart, Texas in the year 2030. He spent his childhood in a series of traumatic events of famine of nations against each other. He was a very bright student with an interest in space travel and engineering while at the University of Colorado in Denver.',
+      img: 'img/Mathew.jpg'
+    },
+    {
+      name: 'Brand',
+      actor: 'Anne Hathaway',
+      bio: 'Amelia Brand was born in the year 2034 in Colorado Springs, the only child of Dr. John Brand and his wife Elizabeth, who died when Amelia was a child. She was a very bright student and class leader in high school that went on to the University of Colorado to study to be a biologist. During her time in college, she fell in love with a man almost 10 years her senior, astronaut Wolf Edmonds, who soon left her for a space mission in 2053 to explore a planet within a wormhole, along with 11 other astronauts.',
+      img: 'img/Brand.jpg'
+    },
+    {
+      name: 'Murph',
+      actor: 'Jessica Chastain',
+      bio: 'Murphy Cooper was born in Lamar, Colorado about 2054. She had never known a world without crop blight, dust, and famine, but was an extremely intelligent girl that shared an affinity for space and science with her father, Joe Cooper and defied the education system for their revised textbooks about the history of space exploration, most notably, mankinds landing on the moon. And she felt a "ghost" was haunting the bookcase in her bedroom, knocking books down.',
+      img: 'img/Murph.jpg'
+    },
+    {
+      name: 'Mann',
+      actor: 'Matt Damon',
+      bio: 'Dr. Mann was a brilliant astronaut and scientist born in the year 2018. His early life is unknown, but in the year 2053, he was part of the Lazarus Missions with NASA, having been one of twelve astronauts having been sent into space to explore potentially habitable worlds. ',
+      img: 'img/Mann.jpg'
+    },
+    {
+      name: 'Prof. Brand',
+      actor: 'Michael Caine',
+      bio: "Professor John Brand was born in the Rotherhithe section of London, England in 1995. He came to America in 2013 attending college at Oxford University, graduating with a doctorate in physics in 2022. He spent much of his early career as a professor at the University of Colorado before going to work for NASA in the 2030's, during the famine wars.",
+      img: 'img/ProfBrand.jpg'
+    },
+    {
+      name: 'Romilly',
+      actor: 'David Gyasi',
+      bio: 'Nikolai Romilly was born in London, England in the year 2032 to parents from Nigeria. He emigrated to America with his family as a child to escape the famine wars and settled in Colorado. He attended the University of Colorado graduating with a degree in physics in 2057 and soon afterwards recruited to work for NASA.',
+      img: 'img/Romilly.jpg'
+    },
+    ];
+  
+  function castInfo(castNum){
+    document.getElementById('name').innerHTML = cast[castNum].name;
+    document.getElementById('actor').innerHTML = cast[castNum].actor;
+    document.getElementById('bio').innerHTML = cast[castNum].bio;
+    document.getElementById('castImgLarge').src = cast[castNum].img;
+  };  
+  
+  var scrollPos = 0;
+  document.getElementById('sideScroll').style.width = (6*270) + "px";
+  function left(){
+    if (scrollPos < 3){
+      scrollPos += 1;
+      document.getElementById('sideScroll').style.left = (scrollPos*260) + "px";
+    }
+  };
+  function right(){
+    if (scrollPos > -3){
+      scrollPos -= 1;
+      document.getElementById('sideScroll').style.left = (scrollPos*260) + "px";
+    }
+  };
+  
+</script>
+</html>

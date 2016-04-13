@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Interstellar</title>
+  <link href='https://fonts.googleapis.com/css?family=Rajdhani:400,500,600,700,300' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="style.css" type="text/css" media="screen" charset="utf-8">
+</head>
+
+<body>
+  <div class="cross" id="c0">
+    <top>
+      <div class="line1"></div>
+      <div class="line2"></div>
+      <h1>Interstellar</h1>
+      <h3>The Art of Science</h3>
+    </top>
+  </div>
+  <a href="about.html">
+    <div class="cross" id="c1">
+      <top>
+        <h1>About Interstellar</h1>
+        <h3>The Trailer and Summary of Interstellar</h3>
+      </top>
+    </div>
+  </a>
+  <a href="gallery.html">
+    <div class="cross" id="c2">
+      <top>
+        <h1>The Beauty Of Space</h1>
+        <h3>A Gallery Showcasing the Beauty of Interstellar</h3>
+      </top>
+    </div>
+  </a>
+  <a href="cast.html">
+    <div class="cross" id="c3">
+      <top>
+        <h1>The Cast Of Interstellar</h1>
+        <h3>Same</h3>
+      </top>
+    </div>
+  </a>
+  <a href="soundtrack.html">
+    <div class="cross" id="cL">
+      <top>
+        <h1>Hans Zimmer's Masterpeice</h1>
+        <h3>A list of some of the best songs made for Interstellar</h3>
+      </top>
+    </div>
+  </a>
+  <div id="background">
+    <div class="crop">
+      <img src="img/inters.jpg" alt="interstellar banner" class="img1">
+    </div>
+    <div class="crop">
+      <img src="img/interstellarBlackHole.jpg" alt="interstellar banner 2" class="img2">
+    </div>
+    <div class="crop">
+      <img src="img/interstellarWater.jpg" alt="interstellar banner 3" class="img3">
+    </div>
+    <div class="crop">
+      <img src="img/interstellarSong.jpg" alt="interstellar banner 4" class="img4">
+    </div>
+  </div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.min.js"></script>
+<script>
+  var offset1 = -263;
+  var offset2 = 202;
+  var offset3 = 484;
+  var offset4 = 1000;
+  update();
+  $(window).scroll(function() {
+   update();
+});
+  $( window ).resize(function() {
+  update();
+});
+  window.setTimeout(function(){window.scrollTo(0,0);}, 50);
+  function update(){
+   $("#background").css('top', $("body").scrollTop()/(-4) + 'px');
+    if(offset1 + $("body").scrollTop()/(-1.33) > -968){
+      $(".img1").css('margin-bottom', offset1 + $("body").scrollTop()/(-1.3305) + 'px');
+      $(".img2").css('margin-top', -600 + $("body").scrollTop()/(1.3305) + 'px');
+    }
+    $(".img2").css('margin-bottom', offset2 + $("body").scrollTop()/(-1.3305) + 'px');
+    $(".img3").css('margin-top', -1200 + $("body").scrollTop()/(1.331) + 'px');
+    $(".img3").css('margin-bottom', offset3 + $("body").scrollTop()/(-1.3305) + 'px');
+    $(".img4").css('margin-top', -1200 + $("body").scrollTop()/(1.331) + 'px');
+    $(".img4").css('margin-bottom', offset4 + $("body").scrollTop()/(-1.3305) + 'px');
+  };
+  var scrollPos = 0;
+  function left(){
+    if (scrollPos < 800){
+      scrollPos += 200;
+      $("#sideScroll").animate({"left":"-" + scrollPos + "px"}, 100);
+      console.log(scrollPos);
+    }
+  };
+  function right(){
+    if (scrollPos > 1){
+      scrollPos -= 200;
+      $("#sideScroll").animate({"left":"-" + scrollPos + "px"}, 100);
+      console.log(scrollPos);
+    }
+  };
+  
+</script>
+</html>

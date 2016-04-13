@@ -1,0 +1,95 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Rajdhani', sans-serif;
+}
+
+#background{
+  position: fixed;
+  top:0;
+  text-align: center;
+  z-index: -1;
+  left: 50%;
+  width: 1920px;
+  margin-left: -960px;
+}
+
+#background img{
+  width: 1920px;
+  height: auto;
+  display:block;
+}
+
+.crop{
+  overflow: hidden;
+}
+
+.line1{
+  position: absolute;
+  width: 120px;
+  height: 3px;
+  left: 50%;
+  top: 140px;
+  margin-left: 85px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, .8);
+}
+.line2{
+  position: absolute;
+  width: 120px;
+  height: 3px;
+  left: 50%;
+  top: 140px;
+  margin-left: -200px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, .8);
+}
+
+.cross{
+  text-align: center; 
+  margin: 50px 0 0 0;
+  padding: 25px 0;
+  background-color: rgba(220, 220, 220, .4);
+}
+
+p{
+  margin: 10px 50px;
+}
+
+#c1{
+  margin-top: 400px;
+}
+
+#c2{
+  margin-top: 400px;
+}
+
+#c3{
+  margin-top: 400px;
+}
+
+#cL{
+  margin-top: 400px;
+  margin-bottom: 100px;
+}
+
+h1{
+  font-size: 60px;
+  margin: -10px 0 -13px 0;
+  letter-spacing: 12px;
+  text-indent: 12px;
+  white-space:nowrap;
+  overflow:hidden;
+}
+
+h3{
+  font-size: 20px;
+  font-weight: 500;
+  white-space:nowrap;
+  overflow:hidden;
+}
+
+a{
+  text-decoration:none;
+  color: #000;
+}
